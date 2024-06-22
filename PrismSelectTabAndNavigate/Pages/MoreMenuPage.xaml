@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismSelectTabAndNavigate.Pages.MoreMenuPage"
+             Title="More Menu">
+    <VerticalStackLayout>
+        <Label 
+            Text="More Menu Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Text="Select Tab and Navigate Async" Command="{Binding LogInCommand}"></Button>
+    </VerticalStackLayout>
+</ContentPage>
