@@ -36,10 +36,10 @@ public static class MauiProgram
 
         builder.Services.AddTransient<Tab1PageModel>();
         builder.Services.AddTransient<Tab2PageModel>();
-        builder.Services.AddTransient<Tab3PageViewModel>();
-        builder.Services.AddTransient<Tab4PageViewModel>();
-        builder.Services.AddTransient<CreateAccountPageViewModel>();
-        builder.Services.AddTransient<MoreMenuViewModel>();
+        builder.Services.AddTransient<Tab3PageModel>();
+        builder.Services.AddTransient<Tab4PageModel>();
+        builder.Services.AddTransient<CreateAccountPageModel>();
+        builder.Services.AddTransient<MoreMenuPageModel>();
 
         MauiApp mauiApp = builder.Build();
         mauiApp.UseFreshMvvm();

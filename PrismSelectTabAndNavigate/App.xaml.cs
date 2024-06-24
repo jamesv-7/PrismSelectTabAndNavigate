@@ -9,9 +9,11 @@ public partial class App : Application
 	{
 		InitializeComponent();
         var TabbedPageContainer = new FreshTabbedNavigationContainer();
-        TabbedPageContainer.AddTab<Tab1PageModel>("Dashboard", null);
-        TabbedPageContainer.AddTab<Tab2PageModel>("MedChest", null);
-        TabbedPageContainer.AddTab<Tab3PageViewModel>("MedChest", null);
+        TabbedPageContainer.AddTab<Tab1PageModel>("Tab 1", null);
+        TabbedPageContainer.AddTab<Tab2PageModel>("Tab 2", null);
+        TabbedPageContainer.AddTab<Tab3PageModel>("Tab 3", null);
+        //TabbedPageContainer.AddTab<Tab4PageModel>("Tab 4", null);
+        TabbedPageContainer.AddTab<MoreMenuPageModel>("More", null);
         MainPage = TabbedPageContainer;
         //MainPage = new AppShell();
     }

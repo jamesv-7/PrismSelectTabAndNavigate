@@ -1,11 +1,11 @@
 ﻿using System;
 namespace PrismSelectTabAndNavigate.ViewModels
 {
-	public class SplashPageViewModel : BasePageViewModel
+	public class SplashPageModel : BasePageViewModel
     {
         protected string MainTabbedPage => "MainTabbedPage";
 
-        public SplashPageViewModel()
+        public SplashPageModel()
         {
         }
 

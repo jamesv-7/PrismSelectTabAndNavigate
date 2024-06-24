@@ -4,9 +4,9 @@ namespace PrismSelectTabAndNavigate.Pages;
 
 public partial class SplashPage : ContentPage
 {
-    public SplashPageViewModel ViewModel { get; private set; }
+    public SplashPageModel ViewModel { get; private set; }
 
-    public SplashPage(SplashPageViewModel splashPageViewModel)
+    public SplashPage(SplashPageModel splashPageViewModel)
     {
         InitializeComponent();
 

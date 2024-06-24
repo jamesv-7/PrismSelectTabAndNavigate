@@ -1,10 +1,10 @@
 ﻿using System;
 namespace PrismSelectTabAndNavigate.ViewModels
 {
-	public class MoreMenuViewModel : BasePageViewModel
+	public class MoreMenuPageModel : BasePageViewModel
     {
 
-        public MoreMenuViewModel()
+        public MoreMenuPageModel()
         {
         }
 
@@ -20,7 +20,9 @@ namespace PrismSelectTabAndNavigate.ViewModels
             };
 
             //var result = await _navigationService.SelectTabAsync("Tab1Page", parameters);
-
+            await CoreMethods.SwitchSelectedTab<Tab1PageModel>();
+            Thread.Sleep(2000);
+            await CoreMethods.PushPageModel<CreateAccountPageModel>();
             //await _navigationService.SelectTabAsync("Tab1Page", new Uri("CreateAccountPage", UriKind.Relative));
 
 

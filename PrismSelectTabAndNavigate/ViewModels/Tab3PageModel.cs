@@ -1,9 +1,9 @@
 ﻿using System;
 namespace PrismSelectTabAndNavigate.ViewModels
 {
-	public class Tab3PageViewModel : BasePageViewModel
+	public class Tab3PageModel : BasePageViewModel
     {
-		public Tab3PageViewModel()
+		public Tab3PageModel()
 		{
 		}
 	}
