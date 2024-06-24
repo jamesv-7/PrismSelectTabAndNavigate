@@ -1,13 +1,11 @@
 ﻿using System;
 namespace PrismSelectTabAndNavigate.ViewModels
 {
-	public class MoreMenuViewModel
+	public class MoreMenuViewModel : BasePageViewModel
     {
-        Prism.Navigation.INavigationService _navigationService;
 
-        public MoreMenuViewModel(Prism.Navigation.INavigationService NavigationService)
+        public MoreMenuViewModel()
         {
-            _navigationService = NavigationService;
         }
 
 
@@ -23,7 +21,7 @@ namespace PrismSelectTabAndNavigate.ViewModels
 
             //var result = await _navigationService.SelectTabAsync("Tab1Page", parameters);
 
-            await _navigationService.SelectTabAsync("Tab1Page", new Uri("CreateAccountPage", UriKind.Relative));
+            //await _navigationService.SelectTabAsync("Tab1Page", new Uri("CreateAccountPage", UriKind.Relative));
 
 
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace PrismSelectTabAndNavigate.ViewModels
 {
-    public class BasePageViewModel : BaseViewModel, INavigationAware, IApplicationLifecycleAware, IPageLifecycleAware
+    public class BasePageViewModel : BaseViewModel
     {
         public BasePageViewModel()
         {
@@ -17,15 +17,6 @@ namespace PrismSelectTabAndNavigate.ViewModels
             //throw new NotImplementedException();
         }
 
-        public void OnNavigatedFrom(INavigationParameters parameters)
-        {
-            //throw new NotImplementedException();
-        }
-
-        public virtual void OnNavigatedTo(INavigationParameters parameters)
-        {
-            //throw new NotImplementedException();
-        }
 
         public void OnResume()
         {

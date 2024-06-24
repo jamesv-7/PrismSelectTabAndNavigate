@@ -1,8 +1,8 @@
 ﻿using System;
 namespace PrismSelectTabAndNavigate.ViewModels
 {
-	public class CreateAccountPageViewModel
-	{
+	public class CreateAccountPageViewModel : BasePageViewModel
+    {
 		public CreateAccountPageViewModel()
 		{
 		}

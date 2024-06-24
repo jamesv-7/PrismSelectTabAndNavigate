@@ -1,7 +1,9 @@
 ﻿using System;
+using FreshMvvm.Maui;
+
 namespace PrismSelectTabAndNavigate.ViewModels
 {
-	public class BaseViewModel : BindableBase
+	public class BaseViewModel : FreshBasePageModel
     {
 
 	}
