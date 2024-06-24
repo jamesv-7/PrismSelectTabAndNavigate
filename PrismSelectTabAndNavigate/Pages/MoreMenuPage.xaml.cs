@@ -4,9 +4,9 @@ namespace PrismSelectTabAndNavigate.Pages;
 
 public partial class MoreMenuPage : ContentPage
 {
-    public MoreMenuViewModel ViewModel { get; private set; }
+    public MoreMenuPageViewModel ViewModel { get; private set; }
 
-    public MoreMenuPage(MoreMenuViewModel vm)
+    public MoreMenuPage(MoreMenuPageViewModel vm)
     {
         ViewModel = vm;
 

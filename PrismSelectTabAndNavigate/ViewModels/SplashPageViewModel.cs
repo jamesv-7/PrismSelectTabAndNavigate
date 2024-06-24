@@ -1,34 +1,41 @@
 ﻿using System;
+using PrismSelectTabAndNavigate.Services;
+
 namespace PrismSelectTabAndNavigate.ViewModels
 {
-	public class SplashPageViewModel : BasePageViewModel
+	public class SplashPageViewModel : BaseViewModel
     {
         protected string MainTabbedPage => "MainTabbedPage";
-        Prism.Navigation.INavigationService _navigationService;
 
-        public SplashPageViewModel(Prism.Navigation.INavigationService NavigationService)
+        public SplashPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            _navigationService = NavigationService;
+            base.QueryLoaded += SplashPageViewModel_QueryLoaded;
         }
 
-        public override async void OnNavigatedTo(INavigationParameters parameters)
+        private void SplashPageViewModel_QueryLoaded(object? sender, IDictionary<string, object> e)
         {
-            base.OnNavigatedTo(parameters);
-
-
-            await StartUp();
+            //await StartUp();
+            //throw new NotImplementedException();
         }
+
+        //public override async void OnNavigatedTo(INavigationParameters parameters)
+        //{
+        //    base.OnNavigatedTo(parameters);
+
+
+        //    await StartUp();
+        //}
 
         public async Task StartUp()
         {
             //await NavigationService.NavigateAsync($"/{MainTabbedPage}?createTab=NavigationPage|{"HomePage"}&createTab=NavigationPage|{"ChestPage"}&createTab=NavigationPage|{"ChestPage"}&createTab=NavigationPage|{"MoreMenuItemsPage"}&{KnownNavigationParameters.SelectedTab}={"HomePage"}");
-            _navigationService.CreateBuilder().UseAbsoluteNavigation()
-                        .AddTabbedSegment(nameof(MainTabbedPage), b =>
-                            b
-                             .CreateTab(t => t.AddNavigationPage().AddSegment("Tab1Page"))
-                             .CreateTab(t => t.AddNavigationPage().AddSegment("Tab2Page"))
-                             .CreateTab(t => t.AddNavigationPage().AddSegment("MoreMenuPage"))
-                             ).Navigate();
+            //_navigationService.CreateBuilder().UseAbsoluteNavigation()
+            //            .AddTabbedSegment(nameof(MainTabbedPage), b =>
+            //                b
+            //                 .CreateTab(t => t.AddNavigationPage().AddSegment("Tab1Page"))
+            //                 .CreateTab(t => t.AddNavigationPage().AddSegment("Tab2Page"))
+            //                 .CreateTab(t => t.AddNavigationPage().AddSegment("MoreMenuPage"))
+            //                 ).Navigate();
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System;
+using PrismSelectTabAndNavigate.Services;
+
 namespace PrismSelectTabAndNavigate.ViewModels
 {
-    public class BasePageViewModel : BaseViewModel, INavigationAware, IApplicationLifecycleAware, IPageLifecycleAware
+    public class BasePageViewModel : BaseViewModel
     {
-        public BasePageViewModel()
+        public BasePageViewModel(INavigationService navigationService) : base(navigationService)
         {
         }
 

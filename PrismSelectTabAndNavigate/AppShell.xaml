@@ -4,13 +4,62 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:PrismSelectTabAndNavigate"
-    Shell.FlyoutBehavior="Disabled"
-    Title="PrismSelectTabAndNavigate">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    Shell.TabBarIsVisible="True"
+     Shell.NavBarIsVisible="True"
+    Shell.FlyoutBehavior="Disabled">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior
+            TextOverride=""
+            IsVisible="False"
+            IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+    <TabBar>
+        <Tab Appearing="Tab_Appearing" Title="Tab1Page"  >
+            <ShellContent
+               
+               IsVisible="True"
+                Title="Tab1Page"      
+                ContentTemplate="{DataTemplate local:Pages.Tab1Page}"
+                Route="Tab1Page" />
+           
+        </Tab>
+        <Tab Title="Tab2Page"  >
+            <ShellContent
+                Title="Tab2Page"      
+                ContentTemplate="{DataTemplate local:Pages.Tab2Page}"
+                Route="Tab2Page" />
+        </Tab>
+        <Tab Title="Tab3Page"     >
+            <ShellContent
+                Title="Tab3Page"      
+                ContentTemplate="{DataTemplate local:Pages.Tab3Page}"
+                Route="Tab3Page" />
+        </Tab>
+        <Tab Title="Tab 4"   >
+            <ShellContent
+                Title="Tab 4"      
+                ContentTemplate="{DataTemplate local:Pages.Tab3Page}"
+                Route="Tab3Page" />
+        </Tab>
+        <Tab Title="MoreMenuPage" >
+            <ShellContent                 
+                Title="MoreMenuPage"      
+                ContentTemplate="{DataTemplate local:Pages.MoreMenuPage}"
+                Route="MoreMenuPage" />
+        </Tab>
+        <!--<Tab Icon="profile.png">  
+            <ShellContent  
+                Title="Profile"  
+                Route="ProfilePage">  
+                <ShellContent.ContentTemplate>  
+                    <DataTemplate>  
+                        <NavigationPage>  
+                            <local:Pages.MainPage />  
+                        </NavigationPage>  
+                    </DataTemplate>  
+                </ShellContent.ContentTemplate>  
+            </ShellContent>  
+        </Tab>-->  
+    </TabBar>
 </Shell>
 
